@@ -30,7 +30,7 @@
 } 
 
 .header{
-  inline-size: 375px;
+  min-width: 375px;
   block-size: 667px;
   display: flex;
   margin: 0px auto;
@@ -38,8 +38,8 @@
   font-family: var(--accent-font);
   background-image: var(--background-image);
   background-size: cover;
- 
 }
+
 .header__wrapper{
   width: 100%;
   display: flex;
@@ -72,9 +72,12 @@
   font-size: 14px;
   text-transform: uppercase;
 }
+
 .theme-menu__button{
   text-transform: uppercase;
-  padding-block-start: 14px;
+  padding: 5px 12px;
+  border: none;
+  background-color: transparent;
 }
 
 /*  
@@ -87,10 +90,12 @@
   block-size: 667px;
 }
 .cards {
-  border: 2px solid #000;
-
+  display: flex;
+  flex-direction: column;
+  gap: 25px
 }
 .card {
+  border: 2px solid var(--main-color);
 }
 .card__title {
   font-family: var(--master-font);
@@ -101,11 +106,14 @@
 .card__image {
   position: relative;
   margin: 0px;
-  block-size: 375px;
 }
 .card__img {
   inline-size: 100%;
-  block-size: 100% ;
+  block-size: 100%;
+  background-blend-mode: hard-light;
+}
+.card__img-two{
+  filter:sepia(30);
 }
 .card__lable {
   position: absolute;
@@ -113,10 +121,20 @@
   right: 13px;
   font-family: var(--accent-font);
   font-size: 14px;
-  text-shadow: 1px 1px 1px #fff;
+  text-shadow:
+    -1px 0 var(--text-shadow), 
+    0 1px var(--text-shadow), 
+    1px 0 var(--text-shadow), 
+    0 -1px var(--text-shadow);  
   text-transform: uppercase;
-
 }
+@supports( (-webkit-text-stroke: 1px var(--text-shadow))) {
+  .card__lable {
+      -webkit-text-stroke: 1px var(--text-shadow);
+      text-shadow: none;
+  }
+} 
+
 .card__description {
   font-family: var(--master-font);
   font-size: 18px;
@@ -133,8 +151,13 @@
   align-items: center;
   gap: 12px;
   margin-inline-end: 25px;
+  padding-block-end: 25px;
 }
 .like-icon {
+  inline-size: 40px;
+  block-size: 40px;
+  background-color: transparent;
+  border: none;
 }
 .card__like-button {
   inline-size: 130px;
@@ -144,5 +167,17 @@
 .button__text {
   font-family: var(--accent-font);
   font-size: 14px;
+}
+@media (min-width: 375px), (max-width <= 1440) {
+  .header {
+    width: var(--width-layout);
+  }
+  .header__wrapper{
+    width: var( --width-content);
+  }
+  .main {
+    width: var(--width-content);
+  }
+ 
 }
 

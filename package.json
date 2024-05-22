@@ -1,0 +1,23 @@
+{
+  "name": "zakrivayuschiy-teg-f",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Hello!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bolgrad1990/zakrivayuschiy-teg-f.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bolgrad1990/zakrivayuschiy-teg-f/issues"
+  },
+  "homepage": "https://github.com/Bolgrad1990/zakrivayuschiy-teg-f#readme",
+  "dependencies": {
+    "prettier": "^3.2.5",
+    "stylelint": "^16.5.0"
+  }
+}

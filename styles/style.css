@@ -20,16 +20,16 @@
   margin: auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  --master-font: 'Inter-Variable', sans-serif;
+  --master-font: "Inter-Variable", sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
   body {
-      font-family: 'Inter-Variable', sans-serif;
+    font-family: "Inter-Variable", sans-serif;
   }
-} 
+}
 
-.header{
+.header {
   min-width: 375px;
   block-size: 667px;
   display: flex;
@@ -40,7 +40,7 @@
   background-size: cover;
 }
 
-.header__wrapper{
+.header__wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -49,31 +49,30 @@
   border: 2px solid var(--main-color);
   background-color: var(--background);
 }
-.favicon-title{
+.favicon-title {
   padding-block-start: 120px;
   padding-block-end: 20px;
   font-size: 49px;
 }
-.header__title{
+.header__title {
   font-size: 14px;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
   place-items: center;
 }
-.theme-menu__list{
+.theme-menu__list {
   display: flex;
   flex-direction: column;
   padding-block-start: 25px;
   align-items: start;
- 
 }
-.theme-menu__item{
+.theme-menu__item {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.theme-menu__button{
+.theme-menu__button {
   text-transform: uppercase;
   padding: 5px 12px 5px 0px;
   border: none;
@@ -90,7 +89,7 @@
 /*  
 блок с карточками 
 */
-.main{
+.main {
   inline-size: 100%;
   margin: auto;
   inline-size: 375px;
@@ -99,7 +98,7 @@
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 25px
+  gap: 25px;
 }
 .card {
   border: 2px solid var(--main-color);
@@ -119,8 +118,8 @@
   block-size: 100%;
   background-blend-mode: hard-light;
 }
-.card__img-two{
-  filter:sepia(30);
+.card__img-two {
+  filter: sepia(30);
 }
 .card__lable {
   position: absolute;
@@ -129,18 +128,18 @@
   font-family: var(--accent-font);
   font-size: 14px;
   text-shadow:
-    -1px 0 var(--text-shadow), 
-    0 1px var(--text-shadow), 
-    1px 0 var(--text-shadow), 
-    0 -1px var(--text-shadow);  
+    -1px 0 var(--text-shadow),
+    0 1px var(--text-shadow),
+    1px 0 var(--text-shadow),
+    0 -1px var(--text-shadow);
   text-transform: uppercase;
 }
-@supports( (-webkit-text-stroke: 1px var(--text-shadow))) {
+@supports ((-webkit-text-stroke: 1px var(--text-shadow))) {
   .card__lable {
-      -webkit-text-stroke: 1px var(--text-shadow);
-      text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-shadow);
+    text-shadow: none;
   }
-} 
+}
 
 .card__description {
   font-family: var(--master-font);
@@ -179,8 +178,8 @@
   .header {
     width: var(--width-layout);
   }
-  .header__wrapper{
-    width: var( --width-content);
+  .header__wrapper {
+    width: var(--width-content);
   }
   .favicon-title {
     font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
@@ -194,6 +193,4 @@
   .main {
     width: var(--width-content);
   }
- 
 }
-

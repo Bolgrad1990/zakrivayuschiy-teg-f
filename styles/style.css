@@ -140,10 +140,11 @@
 блок с карточками 
 */
 .main {
-  inline-size: 100%;
+  /*inline-size: 100%;*/
   margin: auto;
   inline-size: 375px;
   block-size: 667px;
+  color: var(--main-color);
 }
 .cards {
   display: flex;

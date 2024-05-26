@@ -84,6 +84,15 @@
   display: inline-block;
   position: absolute;
   margin-inline-start: -20px;
+  animation: arrow 0.5s ease-in-out infinite alternate-reverse;
+}
+@keyframes arrow {
+  from {
+    margin-inline-start: -20px;
+  }
+  to {
+    margin-inline-start: -24px;
+  }
 }
 
 /*  

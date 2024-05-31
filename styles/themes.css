@@ -17,6 +17,7 @@
     ),
     repeating-linear-gradient(#d3d3d3 2px, transparent 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+    --color-contour:  rgb(0, 0, 0);
 }
 :root.theme-dark {
   --main-color: rgb(0, 204, 20);
@@ -30,12 +31,14 @@
     ),
     repeating-linear-gradient(#000 2px, transparent 4px),
     linear-gradient(#007f0c, #004306);
+    --color-contour:  rgb(0, 204, 20);
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --main-color: rgb(0, 204, 20);
     --background: rgb(0, 0, 0);
     --font-weight-title: 785;
-    --font-weight-paragraph: 465;
+    --font-weight-paragraph: 465; 
+     --color-contour:  rgb(0, 204, 20);
   }
 }

@@ -228,6 +228,38 @@
   border: 2px solid var(--main-color);
   transition: border 0.3s ease;
 }
+.heart {
+}
+.contour {
+}
+.main-body{
+  opacity: 0;
+  fill: var(--color-contour);
+  transition: opacity 0.3s 0.05s;
+}
+.main-body:hover {
+  opacity: 1;   
+}
+.main-body:active {
+  fill: var(--color-heard-main);
+  transition: fill 0.3s 0.05s;
+}
+.core {
+  opacity: 0;
+  fill: var(--color-contour);
+  transition: opacity 0.3s 0.03s;
+}
+.core:hover {
+  opacity: 1;   
+}
+.core:active {
+  fill: var(--color-heard-main);
+  transition: fill 0.3s 0.03s;
+}
+.sparks {
+  opacity: 0;
+}
+
 .card__like-button {
   position: relative;
   inline-size: 130px;

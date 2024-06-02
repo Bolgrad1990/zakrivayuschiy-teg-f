@@ -18,5 +18,5 @@
   --width-content: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   color-scheme: light dark;
   --color-contour: rgb(0, 0, 0);
-  --color-heard-main: rgb(225, 0, 0);
+  --color-heart-main: rgb(225, 0, 0);
 }

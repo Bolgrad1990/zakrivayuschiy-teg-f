@@ -13,6 +13,9 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+/** {
+  outline: 1px solid red;
+}*/
 
 .page {
   display: flex;
@@ -31,13 +34,16 @@
 
 .header {
   min-width: 375px;
-  block-size: 667px;
+  height: 100vh;
   display: flex;
+  flex-wrap: wrap;
+  align-content: start;
   margin: 0px auto;
   color: var(--main-color);
   font-family: var(--accent-font);
   background-image: var(--background-image);
   background-size: cover;
+  position: relative;
 }
 
 .header__wrapper {
@@ -45,12 +51,12 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 25px 2px;
+  padding: 136px 2px 14px;
   border: 2px solid var(--main-color);
   background-color: var(--background);
+  margin-block-start: 100px;
 }
 .favicon-title {
-  padding-block-start: 120px;
   padding-block-end: 20px;
   font-size: 49px;
 }
@@ -64,7 +70,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  padding-block-start: 25px;
+  padding-block-start: 20px;
   align-items: start;
 }
 .theme-menu__item {
@@ -143,11 +149,15 @@
 блок с карточками 
 */
 .main {
-  /*inline-size: 100%;*/
   margin: auto;
   inline-size: 375px;
-  block-size: 667px;
-  color: var(--main-color);
+  color: var(--main-color); 
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+
 }
 .cards {
   display: flex;
@@ -162,6 +172,7 @@
   font-size: 18px;
   font-weight: bold;
   padding: 4px 10px 6px;
+  background-color: var(--background);
 }
 .card__image {
   position: relative;
@@ -172,8 +183,8 @@
   block-size: 100%;
   background-blend-mode: hard-light;
 }
-.card__img-two {
-  filter: sepia(30);
+.card__img-grayscale {
+  filter: grayscale(0.7);
 }
 .card__lable {
   position: absolute;
@@ -199,6 +210,7 @@
   font-family: var(--master-font);
   font-size: 18px;
   padding: 25px 60px 25px 25px;
+  background-color: var(--background);
 }
 /*.card__paragraph {
 }*/
@@ -210,8 +222,8 @@
   justify-content: end;
   align-items: center;
   gap: 12px;
-  margin-inline-end: 25px;
   padding-block-end: 25px;
+  background-color: var(--background);
 }
 .card__icon-button {
   inline-size: 38px;
@@ -228,50 +240,19 @@
   border: 2px solid var(--main-color);
   transition: border 0.3s ease;
 }
-.heart {
-}
-.contour {
-}
-.main-body{
-  opacity: 0;
-  fill: var(--color-contour);
-  transition: opacity 0.3s 0.05s;
-}
-.main-body:hover {
-  opacity: 1;   
-}
-.main-body:active {
-  fill: var(--color-heard-main);
-  transition: fill 0.3s 0.05s;
-}
-.core {
-  opacity: 0;
-  fill: var(--color-contour);
-  transition: opacity 0.3s 0.03s;
-}
-.core:hover {
-  opacity: 1;   
-}
-.core:active {
-  fill: var(--color-heard-main);
-  transition: fill 0.3s 0.03s;
-}
-.sparks {
-  opacity: 0;
-}
 
 .card__like-button {
   position: relative;
   inline-size: 130px;
   block-size: 38px;
-  border: 2px solid #000;
+  margin-inline-end: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background-color: transparent;
   border: 2px solid var(--main-color);
-  mix-blend-mode: difference;
+  /*mix-blend-mode: difference;*/
 }
 .card__like-button:focus-visible {
   outline: none;
@@ -316,6 +297,7 @@
 @media (min-width: 375px), (max-width <= 1440) {
   .header {
     width: var(--width-layout);
+    height: clamp(41.688rem, 35.239rem + 27.512vw, 60rem);
   }
   .header__wrapper {
     width: var(--width-content);
@@ -331,6 +313,8 @@
   }
   .main {
     width: var(--width-content);
+    margin-block-start: clamp(32.938rem, 32.035rem + 3.85vw, 35.5rem);
+  
   }
   .cards {
     gap: clamp(1.563rem, 0.968rem + 2.535vw, 3.25rem);

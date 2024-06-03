@@ -186,6 +186,15 @@
 .card__img-grayscale {
   filter: grayscale(0.7);
 }
+.card__img-saturate {
+  filter: saturate(5.5);
+}
+.card__img-rotate {
+  filter: hue-rotate(45deg);
+}
+.card__img-invert {
+  filter: invert(1) contrast(0.6);
+}
 .card__lable {
   position: absolute;
   top: 25px;

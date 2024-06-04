@@ -183,6 +183,11 @@
   block-size: 100%;
   background-blend-mode: hard-light;
 }
+
+/*
+filtres
+*/
+
 .card__img-grayscale {
   filter: grayscale(0.7);
 }
@@ -195,6 +200,10 @@
 .card__img-invert {
   filter: invert(1) contrast(0.6);
 }
+.card__img-sepia {
+  filter: sepia(1);
+}
+
 .card__lable {
   position: absolute;
   top: 25px;

@@ -203,6 +203,9 @@ filtres
 .card__img-sepia {
   filter: sepia(1);
 }
+.card__img-blur {
+  filter: blur(10px);
+}
 
 .card__lable {
   position: absolute;

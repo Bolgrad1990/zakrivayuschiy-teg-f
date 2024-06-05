@@ -294,7 +294,6 @@ filtres
   width: 0px;
   background-color: var(--main-color);
   height: 38px;
-
   margin-top: 3px;
   transform: scaleX(0);
   transform-origin: left;
@@ -310,14 +309,20 @@ filtres
   font-size: 14px;
   z-index: 1;
 }
-/*@keyframes  buttonLike{
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}*/
+.button-save {
+  width: 306px;
+  margin: auto;
+  margin-block-start: 50px;
+  margin-block-end: 103px;
+  display: flex;
+  gap: 15px;
+
+}
+.floppy {
+ width: 21px;
+ z-index: 1;
+ mix-blend-mode: difference;
+}
 
 @media (min-width: 375px), (max-width <= 1440) {
   .header {
@@ -343,5 +348,8 @@ filtres
   }
   .cards {
     gap: clamp(1.563rem, 0.968rem + 2.535vw, 3.25rem);
+  }
+  .button-save {
+    width: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
   }
 }

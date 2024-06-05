@@ -206,6 +206,10 @@ filtres
 .card__img-blur {
   filter: blur(10px);
 }
+.card__img-mix {
+  filter: hue-rotate(100deg)blur(2px) contrast(0.5);
+
+}
 
 .card__lable {
   position: absolute;

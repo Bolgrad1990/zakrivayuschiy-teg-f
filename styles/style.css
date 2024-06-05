@@ -293,7 +293,7 @@ filtres
   /*display: block;*/
   width: 0px;
   background-color: var(--main-color);
-  height: 38px;
+  height: 55px;
   margin-top: 3px;
   transform: scaleX(0);
   transform-origin: left;
@@ -308,21 +308,31 @@ filtres
   font-family: var(--accent-font);
   font-size: 14px;
   z-index: 1;
+  white-space: nowrap;
+}
+.footer {
+  background-color: var(--background);
+  padding-block-start: 50px;
+  padding-block-end: 103px;
 }
 .button-save {
   width: 306px;
+  height: 84px;
   margin: auto;
-  margin-block-start: 50px;
-  margin-block-end: 103px;
   display: flex;
+  flex-direction: column;
   gap: 15px;
 
 }
 .floppy {
  width: 21px;
  z-index: 1;
- mix-blend-mode: difference;
+ /*mix-blend-mode: difference;*/
 }
+.floppy-dialog {
+  width: 35px;
+}
+
 
 @media (min-width: 375px), (max-width <= 1440) {
   .header {
@@ -351,5 +361,11 @@ filtres
   }
   .button-save {
     width: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
+    height: clamp(3.438rem, 5.888rem + -2.723vw, 5.25rem);
+  }
+}
+@media (min-width: 1440px) {
+  .button-save {
+    flex-direction: row;
   }
 }

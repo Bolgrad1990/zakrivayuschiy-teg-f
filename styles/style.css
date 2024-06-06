@@ -24,6 +24,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   --master-font: 'Inter-Variable', sans-serif;
+  font-variation-settings: 'wght' var(--font-weight-paragraph);
   background-image: var(--background-image);
   background-color: var(--background);
   background-size: cover;
@@ -173,7 +174,7 @@
 .card__title {
   font-family: var(--master-font);
   font-size: 18px;
-  font-weight: bold;
+  font-variation-settings: 'wght' var(--font-weight-title);
   padding: 4px 10px 6px;
   background-color: var(--background);
 }

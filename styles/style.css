@@ -94,14 +94,7 @@
   opacity: 0.6;
   animation: button 0.3s ease;
 }
-@keyframes button {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
+
 .theme-menu__button:focus-visible {
   color: var(--main-color);
   transition: none;
@@ -122,17 +115,8 @@
   transform: scaleX(1);
   width: 100%;
   transition: transform 2s;
-  animation:
-    /*focus 0.5s ease,*/ button 0.3s ease;
+  animation: button 0.3s ease;
 }
-/*@keyframes focus {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}*/
 
 .theme-menu__button:disabled:before {
   content: '▶';
@@ -140,14 +124,6 @@
   position: absolute;
   margin-inline-start: -20px;
   animation: arrow 0.5s ease-in-out infinite alternate-reverse;
-}
-@keyframes arrow {
-  from {
-    margin-inline-start: -20px;
-  }
-  to {
-    margin-inline-start: -24px;
-  }
 }
 
 /*  
@@ -157,7 +133,6 @@
   margin: auto;
   inline-size: 375px;
   color: var(--main-color);
-  /*position: absolute;*/
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -240,8 +215,6 @@ filtres
   padding: 25px 60px 25px 25px;
   background-color: var(--background);
 }
-/*.card__paragraph {
-}*/
 .card__quote {
   margin-block-start: 27px;
 }
@@ -292,7 +265,6 @@ filtres
 .card__like-button::after {
   content: '';
   position: absolute;
-  /*display: block;*/
   width: 0px;
   background-color: var(--main-color);
   height: 85px;

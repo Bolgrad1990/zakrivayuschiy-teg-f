@@ -19,4 +19,5 @@
   color-scheme: light dark;
   --color-contour: rgb(0, 0, 0);
   --color-heart-main: rgb(225, 0, 0);
+  --color-over: rgb(255, 255, 255);
 }

@@ -79,14 +79,14 @@
 }
 .like-icon.is-liked .core {
   fill: var(--color-heart-main);
-  transition: fill 0.3s 0.003s;
+  transition: fill 0.3s;
 }
 .like-icon.is-liked .main-body {
   fill: var(--color-heart-main);
-  transition: fill 0.3s 0.5s;
+  transition: fill 0.3s;
 }
 
-.like-icon.like-icon.is-liked .sparks {
+.like-icon.is-liked .sparks {
   animation: sparks 0.3s 0.3s ease-in alternate-reverse;
 }
 

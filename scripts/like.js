@@ -39,3 +39,19 @@ function setButtonText(heart, button) {
     );
   }
 }
+
+// try scrolling by 1 both vertically and horizontally
+window.scrollTo(1,1);
+
+// did we move vertically?
+if (window.pageYOffset != 0) {
+ console.log("houston, we have vertical scrollbars");
+}
+
+// did we move horizontally?
+if (window.pageXOffset != 0) {
+ console.log("houston, we have horizontal scrollbars");
+}
+
+// reset window to default scroll state
+window.scrollTo(0,0);

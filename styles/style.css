@@ -41,7 +41,7 @@
 
 .header {
   min-width: 375px;
-  height: 364px;
+  min-height: 364px;
   display: flex;
   flex-wrap: wrap;
   align-content: start;
@@ -63,23 +63,31 @@
   border: 2px solid var(--main-color);
   background-color: var(--background);
 }
+
 .favicon-title {
   padding-block-end: 20px;
   font-size: 49px;
 }
-.header__title {
+
+.header__title-content {
   font-size: 14px;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
   place-items: center;
 }
+
+.header__title {
+  font-size: 14px;
+}
+
 .theme-menu__list {
   display: flex;
   flex-direction: column;
   padding-block-start: 20px;
   align-items: start;
 }
+
 .theme-menu__item {
   font-size: 14px;
   text-transform: uppercase;
@@ -93,17 +101,22 @@
   position: relative;
   cursor: pointer;
 }
+
 .theme-menu__button:hover {
   opacity: 0.6;
-  animation: button 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:focus {
+  outline: none;
 }
 
 .theme-menu__button:focus-visible {
   color: var(--main-color);
   transition: none;
   opacity: 0.6;
-  outline: none;
 }
+
 .theme-menu__button::after {
   content: '';
   display: block;
@@ -114,17 +127,23 @@
   transform-origin: left;
   background-color: var(--main-color);
 }
+
 .theme-menu__button:focus-visible::after {
   transform: scaleX(1);
   width: 100%;
-  transition: transform 2s;
-  animation: button 0.3s ease;
+  transition: transform 0.3s;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
 }
 
 .theme-menu__button:disabled:before {
   content: '▶';
   display: inline-block;
   position: absolute;
+  top: 10;
+  left: 0;
   margin-inline-start: -20px;
   animation: arrow 0.5s ease-in-out infinite alternate-reverse;
 }
@@ -137,6 +156,7 @@
   inline-size: 375px;
   color: var(--main-color);
 }
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -145,6 +165,7 @@
 .card {
   border: 2px solid var(--main-color);
 }
+
 .card__title {
   font-family: var(--master-font);
   font-size: 18px;
@@ -153,10 +174,12 @@
   background-color: var(--background);
   word-spacing: 1px;
 }
+
 .card__image {
   position: relative;
   margin: 0px;
 }
+
 .card__img {
   display: block;
   inline-size: 100%;
@@ -173,21 +196,27 @@ filtres
 .card__img-grayscale {
   filter: grayscale(0.7);
 }
+
 .card__img-saturate {
   filter: saturate(5.5);
 }
+
 .card__img-rotate {
   filter: hue-rotate(45deg);
 }
+
 .card__img-invert {
   filter: invert(1) contrast(0.6);
 }
+
 .card__img-sepia {
   filter: sepia(1);
 }
+
 .card__img-blur {
   filter: blur(10px);
 }
+
 .card__img-mix {
   filter: hue-rotate(100deg) blur(2px) contrast(0.5);
 }
@@ -205,6 +234,7 @@ filtres
     0 -1px var(--text-shadow);
   text-transform: uppercase;
 }
+
 @supports ((-webkit-text-stroke: 1px var(--text-shadow))) {
   .card__lable {
     -webkit-text-stroke: 1px var(--text-shadow);
@@ -218,9 +248,11 @@ filtres
   padding: 25px 60px 25px 25px;
   background-color: var(--background);
 }
+
 .card__quote {
   margin-block-start: 27px;
 }
+
 .card__interaction {
   display: flex;
   justify-content: end;
@@ -229,6 +261,7 @@ filtres
   padding-block-end: 25px;
   background-color: var(--background);
 }
+
 .card__icon-button {
   inline-size: 38px;
   block-size: 38px;
@@ -239,9 +272,11 @@ filtres
   display: grid;
   align-items: end;
 }
+
 .card__icon-button:focus {
   outline: none;
 }
+
 .card__icon-button:focus-visible {
   border: 2px solid var(--main-color);
   transition: border 0.3s ease;
@@ -271,16 +306,20 @@ filtres
   overflow: hidden;
   /*mix-blend-mode: difference;*/
 }
+
 .card__like-button:focus {
   outline: none;
 }
+
 .card__like-button:focus-visible {
   box-shadow: 2px 2px 0 var(--main-color);
   transition: box-shadow 0.5s ease-in-out;
 }
+
 .button:hover {
   color: var(--color-over);
 }
+
 .button::after {
   content: '';
   position: absolute;
@@ -289,24 +328,27 @@ filtres
   left: 0;
   background-color: var(--main-color);
   height: 35px;
-  /*margin-top: 3px;*/
   transform: scaleX(0);
   transform-origin: left;
 }
+
 .button:hover::after {
   transform: scaleX(1);
   width: 100%;
   transition: transform 0.5s ease-in-out;
 }
+
 .button__text {
   position: relative;
   z-index: 1;
   white-space: nowrap;
 }
+
 .footer {
   padding-block-start: 50px;
   padding-block-end: 103px;
 }
+
 .footer__button {
   width: 306px;
   height: 85px;
@@ -319,6 +361,7 @@ filtres
   overflow: hidden;
   background-color: var(--background);
 }
+
 .footer__button::after {
   height: 85px;
 }
@@ -328,13 +371,14 @@ filtres
   box-shadow: 2px 2px 0 var(--main-color);
   transition: box-shadow 0.5s ease-in-out;
 }
+
 .footer__buton-text {
   padding-block-end: 10px;
 }
 
 .popup[open] {
   inline-size: 353px;
-  block-size: 191px;
+  min-block-size: 191px;
   position: fixed;
   margin: 0 auto;
   top: 50%;
@@ -348,30 +392,38 @@ filtres
   padding: 30px;
   overflow: hidden;
 }
+
 .popup::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
-  backdrop-filter: blur(7px);
+  opacity: 0.75;
+  background: #000;
 }
+
 .popup__description {
-  display: flex;
-  gap: 45px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  align-items: center;
 }
+
 .popup__text {
   font-family: var(--accent-font);
   font-size: 14px;
   text-transform: uppercase;
   line-height: 150%;
 }
+
 .floppy {
   inline-size: 28px;
   z-index: 1;
   /*mix-blend-mode: difference;*/
   padding-block-start: 14px;
 }
+
 .floppy-dialog {
   width: 39px;
   height: 39px;
 }
+
 .popup__button {
   width: 293px;
   height: 38px;
@@ -393,9 +445,13 @@ filtres
   .theme-menu__list {
     padding-inline-start: clamp(9.625rem, 6.082rem + 15.117vw, 19.688rem);
   }
+  .header__title-content {
+    font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  }
   .header__title {
     font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   }
+
   .main {
     width: var(--width-content);
   }
@@ -408,10 +464,23 @@ filtres
   }
   .footer__button {
     width: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
-    height: clamp(5.25rem, 5.888rem + -2.723vw, 3.438rem);
+    height: clamp(5.313rem, 5.973rem + -2.817vw, 3.438rem);
   }
   .button-save {
     width: clamp(19.125rem, 18.487rem + 2.723vw, 20.938rem);
+  }
+}
+@media (width >= 1140px) {
+  .footer__button {
+    height: 55px; 
+    align-content: center;
+    align-items: center;
+  }
+  .footer__buton-text {
+    padding-block-end: 0px;
+  }
+  .floppy {
+    padding-block-start: 0px;
   }
 }
 

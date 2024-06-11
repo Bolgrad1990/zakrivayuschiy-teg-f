@@ -352,7 +352,7 @@ filtres
 .footer__button {
   width: 306px;
   height: 85px;
-  margin: auto; 
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -427,7 +427,7 @@ filtres
 .popup__button {
   width: 293px;
   height: 38px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
 @media (min-width: 375px), (max-width <= 1440) {
@@ -437,7 +437,7 @@ filtres
   }
   .header__wrapper {
     width: var(--width-content);
-    padding-block-start: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem) ;
+    padding-block-start: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);
   }
   .favicon-title {
     font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
@@ -472,7 +472,7 @@ filtres
 }
 @media (width >= 1140px) {
   .footer__button {
-    height: 55px; 
+    height: 55px;
     align-content: center;
     align-items: center;
   }
@@ -483,5 +483,3 @@ filtres
     padding-block-start: 0px;
   }
 }
-
-

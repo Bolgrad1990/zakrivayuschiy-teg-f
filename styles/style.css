@@ -272,6 +272,7 @@ filtres
   cursor: pointer;
   display: grid;
   align-items: end;
+  border: 2px solid transparent;
 }
 
 .card__icon-button:focus {
@@ -281,7 +282,7 @@ filtres
 .card__icon-button:focus-visible {
   border: 2px solid var(--main-color);
   transition: border 0.3s ease;
-  outline-offset: -2px;
+  /*outline-offset: -2px;*/
 }
 
 /*

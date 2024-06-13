@@ -25,7 +25,7 @@
   margin: auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  --master-font: 'Inter-Variable', sans-serif;
+  font-family: var(--master-font), sans-serif;
   font-variation-settings: 'wght' var(--font-weight-paragraph);
   background-image: var(--background-image);
   background-color: var(--background);

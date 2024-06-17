@@ -171,10 +171,10 @@
   font-family: var(--master-font);
   font-size: 18px;
   font-variation-settings: 'wght' var(--font-weight-title);
-  padding: 7px 22px 4px 10px;
+  padding: 7px 22px 4px 8px;
   background-color: var(--background);
-  word-spacing: 1px;
-  letter-spacing: -0.5px;
+  /*word-spacing: 1px;
+  letter-spacing: -0.5px;*/
 }
 
 .card__image {
@@ -254,8 +254,8 @@ filtres
   padding: 25px;
   padding-inline-end: 48px;
   background-color: var(--background);
-  word-spacing: -1.8px;
-  letter-spacing: 1.1px;
+  word-spacing: 0.2px;
+  letter-spacing: 0.5px;
 }
 
 .card__paragraph {
